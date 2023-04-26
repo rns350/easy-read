@@ -19,6 +19,10 @@ There are three values that this class will look for
 MODULE CLASSES
 ---------------
 Environment - responsible for reading in the current application environment.  These details inform the config setup.
+
+@Author - Reed Nathaniel Schick
+@DateCreated - 4/26/2023
+@DateModified - 4/26/2023
 """
 
 

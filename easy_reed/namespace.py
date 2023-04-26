@@ -10,6 +10,10 @@ it can be registered to the config dictionary via the Config.add_namespace metho
 MODULE CLASSES
 --------------
 NameSpace - used to define config fields for a module
+
+@Author - Reed Nathaniel Schick
+@DateCreated - 4/26/2023
+@DateModified - 4/26/2023
 """
 
 # Standard Library Imports
@@ -72,7 +76,7 @@ class NameSpace():
         default: Any
             - specifies the value to use if the property is not in the application .ini file.
 
-        Throws
+        Raises
         ------
         TypeError
             - When the wrong parameter types are passed to this function, or if the default value is not of the type
@@ -86,30 +90,7 @@ class NameSpace():
             - the entry that is added to the entries list.  Note that the field_name will be converted to upper case.
         """
         err_str = f"field_name: {field_name} | typ: {typ} | default: {default}"
-
-        # Make sure the field_name is a string
-        if not isinstance(field_name, str):
-            err_msg = f"a config field_name must be of type string.  Instead, a {type(field_name)} was passed.\ndetails - {err_str}"
-            logger.error(err_msg)
-            raise TypeError(err_msg)
-        
-        # Make sure the field_name is not empty
-        if len(field_name) == 0:
-            err_msg = f"a config field_name must not be empty.\ndetails - {err_str}"
-            logger.error(err_msg)
-            raise ValueError(err_msg)
-        
-        # Make sure typ specifies a type
-        if not isinstance(typ, type):
-            err_msg = f"typ should be a type, specifying the type of object that the config field represents.  Instead, a {type(typ)} was passed.\ndetails - {err_str}"
-            logger.error(err_msg)
-            raise TypeError(err_msg)
-
-        # Make sure the default is of type typ
-        if not isinstance(default, typ):
-            err_msg = f"default should be of the type specified by typ.  Instead, a {type(default)} was passed.\ndetails - {err_str}"
-            logger.error(err_msg)
-            raise TypeError(err_msg)
+        NameSpace.validate_entry(field_name, typ, default)
 
         # Make sure that the config field hasn't already been added
         if self.has_field(field_name):
@@ -142,35 +123,58 @@ class NameSpace():
         
         return False
 
-
-class ConfigNameSpace():
-
-    def __init__(self, name: str, filename: str, *, typemap: Dict[str, type] = None, interpolators: Dict[type, Callable]) -> Any:
-        self._name = name
-        self._config = ConfigParser(
-            strict=True
-        )
-
-        for key, value in interpolators:
-            errmsg = "An entry in the interpolators dictionary was incorrectly formatted:"
-            if type(key) != type:
-                raise ValueError(
-                    f"{errmsg} the key must be a type object indicating what type the value (a Callable) converts to."
-                    f"The offending key value pair: {key}, {value}"
-                )
-            if type(value) != Callable:
-                raise ValueError(
-                    f"{errmsg} the value must be a Callable that converts a string into the type indicated by the key."
-                    f"The offending key value pair: {key}, {value}"
-                )
-            
-            
+    @staticmethod
+    def validate_entry(field_name: str, typ: type, default: Any):
+        """ validate a given entry for correct type and format
         
-        with open(filename) as f:
-            self._config.read_file(f)
+        This function performs the following checks:
+
+        1. is the field_name a string?
+        2. is the field_name not empty?
+        3. is typ a type?
+        4. is the default of type typ?
+
+        if any of these questions evaluate to false, this function will raise an exception.
+
+        Parameters
+        ----------
+        field_name: str
+            - the name of the field
+        typ: type
+            - the expected type of the config field
+        default: Any
+            - the default to use if the field cannot be parsed
+
+        Raises
+        ------
+        TypeError
+            - When the wrong parameter types are passed to this function, or if the default value is not of the type
+              specified by the typ parameter.
+        ValueError
+            - When the field_name is an empty string, or the field_name already exists within this namespace.
+        """
+        err_str = f"field_name: {field_name} | typ: {typ} | default: {default}"
+
+        # Make sure the field_name is a string
+        if not isinstance(field_name, str):
+            err_msg = f"a config field_name must be of type string.  Instead, a {type(field_name)} was passed.\ndetails - {err_str}"
+            logger.error(err_msg)
+            raise TypeError(err_msg)
         
-    def __get__(self, config_key):
-        if config_key not in self._config:
-            raise KeyError(f"key {config_key} does not exist in the config NameSpace {self._name}")
+        # Make sure the field_name is not empty
+        if len(field_name) == 0:
+            err_msg = f"a config field_name must not be empty.\ndetails - {err_str}"
+            logger.error(err_msg)
+            raise ValueError(err_msg)
         
-        return self._config[config_key]
+        # Make sure typ specifies a type
+        if not isinstance(typ, type):
+            err_msg = f"typ should be a type, specifying the type of object that the config field represents.  Instead, a {type(typ)} was passed.\ndetails - {err_str}"
+            logger.error(err_msg)
+            raise TypeError(err_msg)
+
+        # Make sure the default is of type typ
+        if not isinstance(default, typ):
+            err_msg = f"default should be of the type specified by typ.  Instead, a {type(default)} was passed.\ndetails - {err_str}"
+            logger.error(err_msg)
+            raise TypeError(err_msg)

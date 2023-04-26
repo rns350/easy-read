@@ -956,3 +956,93 @@ ERROR | 04/24/2023 09:39:52 AM | /home/reed/dev/python-wheels/easy-read/easy_ree
 details - field_name: test | typ: <class 'str'> | default: testing
 ERROR | 04/24/2023 09:39:52 AM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 42 | config field test already exists inside of namespace pytest.
 details - field_name: test | typ: <class 'int'> | default: 0
+ERROR | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 4 | Hello
+ERROR | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 86 | LOG_LEVEL is not present in the current environment.  Defaulting LOG_LEVEL to debug
+DEBUG | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 62 | LOG_LEVEL set to debug
+ERROR | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 86 | APP_ENVIRONMENT is not present in the current environment.  Defaulting APP_ENVIRONMENT to local
+DEBUG | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 65 | APP_ENVIRONMENT set to local
+ERROR | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 86 | CONFIG_LOCATION is not present in the current environment.  Defaulting CONFIG_LOCATION to properties_config.ini
+DEBUG | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 68 | APP_CONFIG_LOCATION set to properties_config.ini
+DEBUG | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 62 | LOG_LEVEL set to test
+ERROR | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 86 | APP_ENVIRONMENT is not present in the current environment.  Defaulting APP_ENVIRONMENT to local
+DEBUG | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 65 | APP_ENVIRONMENT set to local
+ERROR | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 86 | CONFIG_LOCATION is not present in the current environment.  Defaulting CONFIG_LOCATION to properties_config.ini
+DEBUG | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 68 | APP_CONFIG_LOCATION set to properties_config.ini
+ERROR | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 86 | LOG_LEVEL is not present in the current environment.  Defaulting LOG_LEVEL to debug
+DEBUG | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 62 | LOG_LEVEL set to debug
+DEBUG | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 65 | APP_ENVIRONMENT set to test
+ERROR | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 86 | CONFIG_LOCATION is not present in the current environment.  Defaulting CONFIG_LOCATION to properties_config.ini
+DEBUG | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 68 | APP_CONFIG_LOCATION set to properties_config.ini
+ERROR | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 86 | LOG_LEVEL is not present in the current environment.  Defaulting LOG_LEVEL to debug
+DEBUG | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 62 | LOG_LEVEL set to debug
+ERROR | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 86 | APP_ENVIRONMENT is not present in the current environment.  Defaulting APP_ENVIRONMENT to local
+DEBUG | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 65 | APP_ENVIRONMENT set to local
+DEBUG | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 68 | APP_CONFIG_LOCATION set to test
+DEBUG | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 62 | LOG_LEVEL set to test1
+DEBUG | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 65 | APP_ENVIRONMENT set to test2
+ERROR | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 86 | CONFIG_LOCATION is not present in the current environment.  Defaulting CONFIG_LOCATION to properties_config.ini
+DEBUG | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 68 | APP_CONFIG_LOCATION set to properties_config.ini
+DEBUG | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 62 | LOG_LEVEL set to test1
+ERROR | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 86 | APP_ENVIRONMENT is not present in the current environment.  Defaulting APP_ENVIRONMENT to local
+DEBUG | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 65 | APP_ENVIRONMENT set to local
+DEBUG | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 68 | APP_CONFIG_LOCATION set to test2
+ERROR | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 86 | LOG_LEVEL is not present in the current environment.  Defaulting LOG_LEVEL to debug
+DEBUG | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 62 | LOG_LEVEL set to debug
+DEBUG | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 65 | APP_ENVIRONMENT set to test1
+DEBUG | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 68 | APP_CONFIG_LOCATION set to test2
+DEBUG | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 62 | LOG_LEVEL set to test1
+DEBUG | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 65 | APP_ENVIRONMENT set to test2
+DEBUG | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 68 | APP_CONFIG_LOCATION set to test3
+ERROR | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 93 | config field test already exists inside of namespace pytest.
+details - field_name: test | typ: <class 'str'> | default: testing
+ERROR | 04/24/2023 12:19:07 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 93 | config field test already exists inside of namespace pytest.
+details - field_name: test | typ: <class 'int'> | default: 0
+ERROR | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 4 | Hello
+ERROR | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 86 | LOG_LEVEL is not present in the current environment.  Defaulting LOG_LEVEL to debug
+DEBUG | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 62 | LOG_LEVEL set to debug
+ERROR | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 86 | APP_ENVIRONMENT is not present in the current environment.  Defaulting APP_ENVIRONMENT to local
+DEBUG | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 65 | APP_ENVIRONMENT set to local
+ERROR | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 86 | CONFIG_LOCATION is not present in the current environment.  Defaulting CONFIG_LOCATION to properties_config.ini
+DEBUG | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 68 | APP_CONFIG_LOCATION set to properties_config.ini
+DEBUG | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 62 | LOG_LEVEL set to test
+ERROR | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 86 | APP_ENVIRONMENT is not present in the current environment.  Defaulting APP_ENVIRONMENT to local
+DEBUG | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 65 | APP_ENVIRONMENT set to local
+ERROR | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 86 | CONFIG_LOCATION is not present in the current environment.  Defaulting CONFIG_LOCATION to properties_config.ini
+DEBUG | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 68 | APP_CONFIG_LOCATION set to properties_config.ini
+ERROR | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 86 | LOG_LEVEL is not present in the current environment.  Defaulting LOG_LEVEL to debug
+DEBUG | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 62 | LOG_LEVEL set to debug
+DEBUG | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 65 | APP_ENVIRONMENT set to test
+ERROR | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 86 | CONFIG_LOCATION is not present in the current environment.  Defaulting CONFIG_LOCATION to properties_config.ini
+DEBUG | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 68 | APP_CONFIG_LOCATION set to properties_config.ini
+ERROR | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 86 | LOG_LEVEL is not present in the current environment.  Defaulting LOG_LEVEL to debug
+DEBUG | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 62 | LOG_LEVEL set to debug
+ERROR | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 86 | APP_ENVIRONMENT is not present in the current environment.  Defaulting APP_ENVIRONMENT to local
+DEBUG | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 65 | APP_ENVIRONMENT set to local
+DEBUG | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 68 | APP_CONFIG_LOCATION set to test
+DEBUG | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 62 | LOG_LEVEL set to test1
+DEBUG | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 65 | APP_ENVIRONMENT set to test2
+ERROR | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 86 | CONFIG_LOCATION is not present in the current environment.  Defaulting CONFIG_LOCATION to properties_config.ini
+DEBUG | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 68 | APP_CONFIG_LOCATION set to properties_config.ini
+DEBUG | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 62 | LOG_LEVEL set to test1
+ERROR | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 86 | APP_ENVIRONMENT is not present in the current environment.  Defaulting APP_ENVIRONMENT to local
+DEBUG | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 65 | APP_ENVIRONMENT set to local
+DEBUG | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 68 | APP_CONFIG_LOCATION set to test2
+ERROR | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 86 | LOG_LEVEL is not present in the current environment.  Defaulting LOG_LEVEL to debug
+DEBUG | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 62 | LOG_LEVEL set to debug
+DEBUG | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 65 | APP_ENVIRONMENT set to test1
+DEBUG | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 68 | APP_CONFIG_LOCATION set to test2
+DEBUG | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 62 | LOG_LEVEL set to test1
+DEBUG | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 65 | APP_ENVIRONMENT set to test2
+DEBUG | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 68 | APP_CONFIG_LOCATION set to test3
+ERROR | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 129 | a config field_name must be of type string.  Instead, a <class 'type'> was passed.
+details - field_name: <class 'str'> | typ: <class 'str'> | default: default
+ERROR | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 135 | a config field_name must not be empty.
+details - field_name:  | typ: <class 'str'> | default: default
+ERROR | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 141 | typ should be a type, specifying the type of object that the config field represents.  Instead, a <class 'str'> was passed.
+details - field_name: name | typ: fail | default: default
+ERROR | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 147 | default should be of the type specified by typ.  Instead, a <class 'int'> was passed.
+details - field_name: name | typ: <class 'str'> | default: 0
+ERROR | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 94 | config field test already exists inside of namespace pytest.
+details - field_name: test | typ: <class 'str'> | default: testing
+ERROR | 04/24/2023 12:19:36 PM | /home/reed/dev/python-wheels/easy-read/easy_reed/_logger.py | line 94 | config field test already exists inside of namespace pytest.
+details - field_name: test | typ: <class 'int'> | default: 0
