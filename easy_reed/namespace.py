@@ -13,7 +13,7 @@ NameSpace - used to define config fields for a module
 
 @Author - Reed Nathaniel Schick
 @DateCreated - 4/26/2023
-@DateModified - 4/26/2023
+@DateModified - 4/28/2023
 """
 
 # Standard Library Imports
@@ -42,6 +42,8 @@ class NameSpace():
 
     METHODS
     -------
+    get_name(self) -> str
+        - simple getter method for the name of the namespace
     add_entry(self, field_name: str, typ: type, default: Any) -> Tuple[str, type, Any]
         - add a new config field to this namespace
     has_field(self, field_name: str) -> bool
@@ -56,6 +58,10 @@ class NameSpace():
     def __iter__(self):
         """ Return an iterator for the entries list """
         return iter(self.entries)
+    
+    def get_name(self) -> str:
+        """ Simple getter method for the name of this namespace """
+        return self.name
 
     def add_entry(self, field_name: str, typ: type, default: Any) -> Tuple[str, type, Any]:
         """ Add a new config field to this NameSpace

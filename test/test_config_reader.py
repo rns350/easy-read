@@ -66,40 +66,40 @@ def test_read_field_local():
     environment = Environment()
     reader = ConfigReader(environment)
 
-    assert reader.read_field("test1", str, "fail") == "local1"
-    assert reader.read_field("test2", str, "fail") == "local2"
-    assert reader.read_field("default", str, "fail") == "constant"
-    assert reader.read_field("test3", str, "fail") == "fail"
+    assert reader.read_field("test.test1", str, "fail") == "local1"
+    assert reader.read_field("test.test2", str, "fail") == "local2"
+    assert reader.read_field("test.default", str, "fail") == "constant"
+    assert reader.read_field("test.test3", str, "fail") == "fail"
 
 def test_read_field_dev():
     os.environ[Environment._app_environment_key] = "dev"
     environment = Environment()
     reader = ConfigReader(environment)
 
-    assert reader.read_field("test1", str, "fail") == "dev1"
-    assert reader.read_field("test2", str, "fail") == "dev2"
-    assert reader.read_field("default", str, "fail") == "constant"
-    assert reader.read_field("test3", str, "fail") == "fail"
+    assert reader.read_field("test.test1", str, "fail") == "dev1"
+    assert reader.read_field("test.test2", str, "fail") == "dev2"
+    assert reader.read_field("test.default", str, "fail") == "constant"
+    assert reader.read_field("test.test3", str, "fail") == "fail"
 
 def test_read_field_qa():
     os.environ[Environment._app_environment_key] = "qa"
     environment = Environment()
     reader = ConfigReader(environment)
 
-    assert reader.read_field("test1", str, "fail") == "qa1"
-    assert reader.read_field("test2", str, "fail") == "qa2"
-    assert reader.read_field("default", str, "fail") == "constant"
-    assert reader.read_field("test3", str, "fail") == "fail"
+    assert reader.read_field("test.test1", str, "fail") == "qa1"
+    assert reader.read_field("test.test2", str, "fail") == "qa2"
+    assert reader.read_field("test.default", str, "fail") == "constant"
+    assert reader.read_field("test.test3", str, "fail") == "fail"
 
 def test_read_field_prod():
     os.environ[Environment._app_environment_key] = "prod"
     environment = Environment()
     reader = ConfigReader(environment)
 
-    assert reader.read_field("test1", str, "fail") == "prod1"
-    assert reader.read_field("test2", str, "fail") == "prod2"
-    assert reader.read_field("default", str, "fail") == "constant"
-    assert reader.read_field("test3", str, "fail") == "fail"
+    assert reader.read_field("test.test1", str, "fail") == "prod1"
+    assert reader.read_field("test.test2", str, "fail") == "prod2"
+    assert reader.read_field("test.default", str, "fail") == "constant"
+    assert reader.read_field("test.test3", str, "fail") == "fail"
 
 def test_read_field_no_handler():
     reader = ConfigReader(Environment())
@@ -114,10 +114,10 @@ def test_non_existant_section():
     environment = Environment()
     reader = ConfigReader(environment)
 
-    assert reader.read_field("test1", str, "fail") == "fail"
-    assert reader.read_field("test2", str, "fail") == "fail"
-    assert reader.read_field("default", str, "fail") == "constant"
-    assert reader.read_field("test3", str, "fail") == "fail"
+    assert reader.read_field("test.test1", str, "fail") == "fail"
+    assert reader.read_field("test.test2", str, "fail") == "fail"
+    assert reader.read_field("test.default", str, "fail") == "constant"
+    assert reader.read_field("test.test3", str, "fail") == "fail"
 
 def test_non_existant_file():
     os.environ[Environment._config_location_key] = "None"
@@ -125,18 +125,18 @@ def test_non_existant_file():
     reader = ConfigReader(environment)
 
     assert reader._app_environment == "DEFAULT"
-    assert reader.read_field("test1", str, "fail") == "fail"
-    assert reader.read_field("test2", str, "fail") == "fail"
-    assert reader.read_field("default", str, "fail") == "fail"
-    assert reader.read_field("test3", str, "fail") == "fail"
+    assert reader.read_field("test.test1", str, "fail") == "fail"
+    assert reader.read_field("test.test2", str, "fail") == "fail"
+    assert reader.read_field("test.default", str, "fail") == "fail"
+    assert reader.read_field("test.test3", str, "fail") == "fail"
 
 def test_add_handler():
     reader = ConfigReader(Environment())
 
     reader.add_handler(Person, Person.parse_person)
 
-    guts = reader.read_field("guts", Person, Person("None", -1))
-    casca = reader.read_field("casca", Person, Person("None", -1))
+    guts = reader.read_field("test.guts", Person, Person("None", -1))
+    casca = reader.read_field("test.casca", Person, Person("None", -1))
 
     assert guts.get_name() == "guts"
     assert guts.get_age() == 24
@@ -173,6 +173,6 @@ def test_callable_exception():
     reader = ConfigReader(Environment())
     reader.add_handler(Person, Person.parse_person)
 
-    person = reader.read_field("bad", Person, Person("Failure", -1))
+    person = reader.read_field("test.bad", Person, Person("Failure", -1))
     assert person.get_name() == "Failure"
     assert person.get_age() == -1

@@ -58,11 +58,16 @@ class Environment():
 
     _app_environment_default = "local"
     _app_config_location_default = "properties_config.ini"
-    _log_level_default = "debug"
+    _log_level_default = "DEBUG"
 
     def __init__(self):
         # Retrieve the log level from the environment if available, and log it out
         self._log_level = Environment._retrieve_key(Environment._log_level_key, Environment._log_level_default)
+        try:
+            logger.setLevel(self._log_level.upper())
+        except ValueError as e:
+            logger.error(f"ERROR: LOG_LEVEL read in as {self._log_level}, but this is not a valid log level.  Defaulting to {Environment._log_level_default}")
+            logger.setLevel(Environment._log_level_default)
         logger.debug(f"{Environment._log_level_key} set to {self._log_level}")
         # Retrieve the app environment from the environment if available, and log it out
         self._app_environment = Environment._retrieve_key(Environment._app_environment_key, Environment._app_environment_default)

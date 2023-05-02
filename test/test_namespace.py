@@ -15,6 +15,7 @@ def test_add_entry_1_field():
     assert hasattr(test, "entries")
     assert hasattr(test, "name")
     assert test.name == "pytest"
+    assert test.get_name() == "pytest"
     assert isinstance(test.entries, list)
     assert len(test.entries) == 1
     assert isinstance(test.entries[0], tuple)
