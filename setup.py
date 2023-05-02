@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 setup_info = dict(
   name='easy_reed',
   python_requires=">=3.7",
-  version='0.1.5',
+  version='0.9.0',
   description='Config Library for cross module configuration',
   author="Reed Schick",
   author_email='rns350@nyu.edu',
